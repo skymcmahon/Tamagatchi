@@ -13,14 +13,17 @@ class tomagotchi{
        //eat
     eat() {
         this.hunger = 0;
+        console.log('ate food');
     }
        //sleep
     sleep() {
         this.tiredness = 0;
+        console.log('took a nap');
     }
        //play
     play() {
         this.bordom = 0;
+        console.log('played with toys');
     }
 };
 //----------Universal stuff----------
