@@ -34,7 +34,8 @@ console.log(billy);
 //----------functions----------
 function updateAge() {
     const age = document.getElementById('age');
-    age.innerText = `Billy: ${age}s`;
+    billy.age += 1
+    age.innerText = `Billy age: ${billy.age}`;
 };
 
 function updateStats() {
