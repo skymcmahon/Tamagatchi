@@ -39,9 +39,23 @@ function updateAge() {
 };
 
 function updateStats() {
-    billy.bordom += 1;
-    billy.hunger += 1;
-    billy.tiredness += 1;
+    if (Math.random() > billy.bordomResistance){
+        billy.bordom += 1;
+    } else {
+        console.log('Billy resisted bordom');
+    }
+
+    if (Math.random() > billy.tiredResistance){
+        billy.tiredness += 1;
+    } else {
+        console.log('Billy resisted Sleep');
+    }
+
+    if (Math.random() > billy.hungerResistance){
+        billy.hunger += 1;
+    } else {
+        console.log('Billy resisted hunger');
+    }
 };
 
 
