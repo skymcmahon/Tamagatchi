@@ -28,41 +28,40 @@ class tomagotchi{
 };
 //----------Universal stuff----------
 let time = 0;
+let name = ''
 
-
-const billy = new tomagotchi();
-// console.log(billy);
+const pet = new tomagotchi();
+// console.log(pet);
 
 
 //----------functions----------
 function updateAge() {
     const age = document.getElementById('age');
-    billy.age += 1
-    age.innerText = `Billy age: ${billy.age}`;
+    pet.age += 1
+    age.innerText = `pet age: ${pet.age}`;
 };
 
 function updateStats() {
-    if (Math.random() > billy.bordomResistance){
-        billy.bordom += 1;
+    if (Math.random() > pet.bordomResistance){
+        pet.bordom += 1;
     } else {
-        console.log('Billy resisted bordom');
+        console.log('pet resisted bordom');
     }
 
-    if (Math.random() > billy.tiredResistance){
-        billy.tiredness += 1;
+    if (Math.random() > pet.tiredResistance){
+        pet.tiredness += 1;
     } else {
-        console.log('Billy resisted Sleep');
+        console.log('pet resisted Sleep');
     }
 
-    if (Math.random() > billy.hungerResistance){
-        billy.hunger += 1;
+    if (Math.random() > pet.hungerResistance){
+        pet.hunger += 1;
     } else {
-        console.log('Billy resisted hunger');
+        console.log('pet resisted hunger');
     }
 };
 
 function updateTime(){
-
 
 }
 
@@ -86,7 +85,7 @@ function startTimer(){
         } 
         else{
             console.log('Time is up');
-            console.log(billy);
+            console.log(pet);
             clearInterval(timer);
         }
     }, 1000);
@@ -110,6 +109,10 @@ function displayGame(){
     }
 };
 
+// function updateTime(params) {
+//     const timer = document.getElementById('timer');
+//     timer.innerText = `Timer: ${time}s`;
+// }
 
 
 
