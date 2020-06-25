@@ -85,22 +85,49 @@ function startTimer(){
             clearInterval(timer);
         }
     }, 1000);
-}
+};
+
+function removeIntro(){
+    // introScreen.id = 'invisible';
+    if (introScreen.id !== 'invisible'){
+        introScreen.id = 'invisible';
+    }else {
+        introScreen.id = 'introScreen';
+    }
+
+};
+
+function displayGame(){
+    if (game.id !== 'invisible'){
+        game.id = 'invisible';
+    }else {
+        game.id = 'game';
+    }
+};
+
+
+
+
 // ---------DOM Elements-------------
 const introScreen = document.getElementById('introScreen');
 const yes = document.getElementById('yes');
 const no = document.getElementById('no');
+const game = document.getElementById('invisible');
 
 // ---------handle functions----------
 function handleYesButton(){
     console.log('YES');
+    removeIntro();
+    startTimer();
+    displayGame();
     alert('Yes!');
-}
+};
 
 function handleNoButton(){
     console.log('No!!!');
+    removeIntro();
     alert('no');
-}
+};
 
 
 
@@ -116,8 +143,8 @@ no.addEventListener('click', handleNoButton);
 
 
 
-startTimer()
+// startTimer()
 function fakeLog(){
     console.log('This is not a test!');
-}
+};
 
