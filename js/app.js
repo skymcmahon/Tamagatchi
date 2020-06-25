@@ -61,7 +61,6 @@ function updateStats() {
     }
 };
 
-
 function startTimer(){
     const timer = setInterval(function (){
         if (time < 60){
@@ -87,7 +86,38 @@ function startTimer(){
         }
     }, 1000);
 }
+// ---------DOM Elements-------------
+const introScreen = document.getElementById('introScreen');
+const yes = document.getElementById('yes');
+const no = document.getElementById('no');
+
+// ---------handle functions----------
+function handleYesButton(){
+    console.log('YES');
+    alert('Yes!');
+}
+
+function handleNoButton(){
+    console.log('No!!!');
+    alert('no');
+}
+
+
+
+
+//----------event listeners----------
+
+yes.addEventListener('click', handleYesButton);
+no.addEventListener('click', handleNoButton);
+
 
 
 //----------temp----------
+
+
+
 startTimer()
+function fakeLog(){
+    console.log('This is not a test!');
+}
+
