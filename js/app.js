@@ -31,7 +31,7 @@ let time = 0;
 
 
 const billy = new tomagotchi();
-console.log(billy);
+// console.log(billy);
 
 
 //----------functions----------
@@ -60,6 +60,11 @@ function updateStats() {
         console.log('Billy resisted hunger');
     }
 };
+
+function updateTime(){
+
+
+}
 
 function startTimer(){
     const timer = setInterval(function (){
@@ -110,9 +115,12 @@ function displayGame(){
 
 // ---------DOM Elements-------------
 const introScreen = document.getElementById('introScreen');
-const yes = document.getElementById('yes');
-const no = document.getElementById('no');
+// const yes = document.getElementById('yes');
+// const no = document.getElementById('no');
 const game = document.getElementById('invisible');
+const feed = findElement('#button1')
+const sleep = findElement('#button2')
+const play = findElement('#button3')
 
 // ---------handle functions----------
 function handleYesButton(){
@@ -129,22 +137,47 @@ function handleNoButton(){
     alert('no');
 };
 
+function handleFeedButton(){
+console.log('you pressed feed');
+};
 
+function handleSleepButton(){
+console.log('you pressed sleep');
+};
+
+function handlePlayButton(){
+console.log('you pressed play');
+};
 
 
 //----------event listeners----------
 
-yes.addEventListener('click', handleYesButton);
-no.addEventListener('click', handleNoButton);
-
-
+// yes.addEventListener('click', handleYesButton);
+// no.addEventListener('click', handleNoButton);
+feed.addEventListener('click', handleFeedButton);
+sleep.addEventListener('click', handleSleepButton);
+play.addEventListener('click', handlePlayButton);
 
 //----------temp----------
 
 
-
 // startTimer()
-function fakeLog(){
-    console.log('This is not a test!');
-};
+// function fakeLog(){
+//     console.log('This is not a test!');
+// };
 
+// Jimmy Functions
+
+function createElement(type,id,className,textContent,parent) {
+    let newElement = document.createElement(type);
+    newElement.id = id;
+    newElement.className = className;
+    newElement.textContent = textContent;
+    (parent) ? parent.appendChild(newElement) : document.body.appendChild(newElement);
+    return newElement;
+  }
+function findElement(query, isMulti = false) {
+    return (!isMulti) ?
+            document.querySelector(query) :
+            document.querySelectorAll(query);
+}
