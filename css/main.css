@@ -162,9 +162,12 @@ border: 2px solid black;
 
 /* --bottom of game-- */
 .button {
+  justify-content: space-evenly;
   height: 20px;
   width: 60px;
-  margin: 5px;
+  margin-top: 8px;
+  margin-left: 25px;
+  margin-right: 25px;
   border-radius: 15px;
 }
 
@@ -185,6 +188,10 @@ background-color: #FADE7A;
   height: 20px;
 }
 
+label {
+  font-size: 13px;
+  padding-top: 8px;
+}
 
 
 
