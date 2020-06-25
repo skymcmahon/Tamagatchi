@@ -117,9 +117,9 @@ const game = document.getElementById('invisible');
 // ---------handle functions----------
 function handleYesButton(){
     console.log('YES');
-    removeIntro();
+    // removeIntro();
     startTimer();
-    displayGame();
+    // displayGame();
     alert('Yes!');
 };
 

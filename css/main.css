@@ -3,9 +3,24 @@
   }
   
   body {
+    font-family: sans-serif;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main {
+    /* font-family: sans-serif;
+    padding: 0;
+    margin: 0; */
+    width: 85vw;
+    height: 100vh;
     background-color: rgb(204, 204, 204);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   h1 {
@@ -15,6 +30,8 @@
   }
   
   header {
+    position: fixed;
+    top: 0;
     text-align: center;
     display: inline-block;
     width: 100%;
@@ -85,6 +102,69 @@ align-items: center;
 background-color: crimson;
 font-size: 40px;
 }
+
+ /* ---------Game Display--------- */
+ /* ------------------------------ */
+
+#game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.case {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  background-color: #64E9CC;
+  border-radius: 50px;
+  border: 5px solid black;
+  justify-content: center;
+  align-items: center;
+}
+/* --Screen-- */
+.screen {
+height: 270px;
+width: 320px;
+background-color: gray;
+border-radius: 15px ;
+border: 2px solid black;
+}
+
+.stats {
+  display: inline-block;
+  font-size: 17px;
+}
+
+.button {
+  height: 20px;
+  width: 60px;
+  margin: 5px;
+  border-radius: 15px;
+}
+
+#button1{
+background-color: #FE2062;
+}
+
+#button2{
+background-color: #04BDCF;
+}
+
+#button3{
+background-color: #FADE7A;
+}
+
+#input {
+  margin-top: 5px;
+  height: 20px;
+}
+
+
+
+
+
 
 
 /* ----------invisible------------- */
