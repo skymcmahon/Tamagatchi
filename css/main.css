@@ -115,28 +115,52 @@ font-size: 40px;
 .case {
   display: flex;
   flex-direction: column;
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 500px;
   background-color: #64E9CC;
-  border-radius: 50px;
+  border-radius: 50px 50px 85px 85px;
   border: 5px solid black;
   justify-content: center;
   align-items: center;
 }
+
 /* --Screen-- */
 .screen {
-height: 270px;
-width: 320px;
-background-color: gray;
+position: relative;
+height: 330px;
+width: 400px;
+background-color: white;
 border-radius: 15px ;
 border: 2px solid black;
 }
 
 .stats {
-  display: inline-block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
   font-size: 17px;
+  justify-content: space-evenly;
 }
 
+.image {
+  height: 250px;
+  width:  250px;
+  background-image: url(/assets/L1.JPG);
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  position: absolute;
+  top: 25px;
+  left: 70px;
+}
+
+.age {
+  position: absolute;
+  left: 10px;
+}
+
+/* --bottom of game-- */
 .button {
   height: 20px;
   width: 60px;
