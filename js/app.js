@@ -39,6 +39,7 @@ function updateAge() {
     ageStatus.innerText = `${name} age: ${pet.age}`;
     changeImage();
     endGame();
+    die();
 };
 
 function updateStats() {
@@ -65,7 +66,7 @@ function startTimer(){
             console.log(time);
             if (time % 3 === 0){
                 updateStats();
-            }else if(time % 4 === 0){
+            }else if(time % 7 === 0){
                 updateAge();
             }
         }else {
@@ -116,7 +117,11 @@ function endGame (){
         image.style.backgroundImage = "url('/assets/Win.jpg')";
         image.innerText = `Congratulations ${name} Survived!`;
         time = 61
-    } else if ( pet.hunger === 11 || pet.tiredness === 11 || pet.bordom === 11){
+    } 
+};
+
+function die (){
+    if ( pet.hunger === 11 || pet.tiredness === 11 || pet.bordom === 11){
         image.style.backgroundImage = "url('/assets/RIP.jpg')";
         image.innerText = `R.I.P ${name}`;
         time = 61
