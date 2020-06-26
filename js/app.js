@@ -101,20 +101,20 @@ function getInputValue(){
 
 function changeImage (){  
     if ( pet.age === 2){
-        image.style.backgroundImage = "url(./assets/L2.JPG)";
+        image.style.backgroundImage = "url(/assets/L2.JPG)";
     }else if ( pet.age === 3){
-        image.style.backgroundImage = "url(./assets/L3.JPG)";
+        image.style.backgroundImage = "url(/assets/L3.JPG)";
     }else if ( pet.age === 4){
-        image.style.backgroundImage = "url(./assets/L4.JPG)";
+        image.style.backgroundImage = "url(/assets/L4.JPG)";
     }else if ( pet.age === 5){
-        image.style.backgroundImage = "url(./assets/L5.JPG)";
+        image.style.backgroundImage = "url(/assets/L5.JPG)";
     }
     //SHOUT OUT TO MELISA FOR HELPING WITH THIS MONSTER!
 };
 
 function endGame (){  
     if ( pet.age === 6 ){
-        image.style.backgroundImage = "url('./assets/Win.jpg')";
+        image.style.backgroundImage = "url('/assets/Win.jpg')";
         image.innerText = `Congratulations ${name} Survived!`;
         time = 61
     } 
@@ -122,7 +122,7 @@ function endGame (){
 
 function die (){
     if ( pet.hunger === 11 || pet.tiredness === 11 || pet.bordom === 11){
-        image.style.backgroundImage = "url('./assets/RIP.jpg')";
+        image.style.backgroundImage = "url('/assets/RIP.jpg')";
         image.innerText = `R.I.P ${name}`;
         time = 61
     }
