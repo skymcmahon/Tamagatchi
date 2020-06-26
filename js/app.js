@@ -1,13 +1,13 @@
 class tomagotchi{
     constructor(hungerResistance, tiredResistance, bordomResistance){
         this.hungerResistance = hungerResistance || Math.floor((Math.random() * (.2 - .15 + .1) + .15)* 10) /10;
-        this.tiredResistance = tiredResistance || Math.floor((Math.random() * (.2 - .15 + .1) + .15)* 10) /10;
+        this.tiredResistance = tiredResistance || Math.floor((Math.random() * (.6 - .4 + .1) + .4)* 10) /10;
         this.bordomResistance = bordomResistance ||  Math.floor((Math.random() * (.2 - .15 + .1) + .15)* 10) /10;
         this.hunger = 0;
         this.tiredness = 0;
         this.bordom = 0;
         this.age = 0;
-        this.name = '';
+        // this.name = '';
     }
     //----------methods----------
        //eat
@@ -36,26 +36,29 @@ const pet = new tomagotchi();
 
 //----------functions----------
 function updateAge() {
-    const age = document.getElementById('age');
+    const age = findElement('.age');
     pet.age += 1
-    age.innerText = `pet age: ${pet.age}`;
+    age.innerText = `${name} age: ${pet.age}`;
 };
 
 function updateStats() {
     if (Math.random() > pet.bordomResistance){
         pet.bordom += 1;
+        boredElement.innerText = `Bored: ${pet.bordom}`;
     } else {
         console.log('pet resisted bordom');
     }
 
     if (Math.random() > pet.tiredResistance){
         pet.tiredness += 1;
+        tiredElement.innerText = `Tired: ${pet.tiredness}`;
     } else {
         console.log('pet resisted Sleep');
     }
 
     if (Math.random() > pet.hungerResistance){
         pet.hunger += 1;
+        hungryElement.innerText = `Hungry: ${pet.hunger}`
     } else {
         console.log('pet resisted hunger');
     }
@@ -121,15 +124,23 @@ const introScreen = document.getElementById('introScreen');
 // const yes = document.getElementById('yes');
 // const no = document.getElementById('no');
 const game = document.getElementById('invisible');
-const feed = findElement('#button1')
-const sleep = findElement('#button2')
-const play = findElement('#button3')
+const feed = findElement('#button1');
+const sleep = findElement('#button2');
+const play = findElement('#button3');
+const startGame = findElement('#startGameButton');
+const hungryElement = findElement('.hungry');
+const tiredElement = findElement('.tired');
+const boredElement = findElement('.bored');
+const image = findElement('.image');
+
+
+console.log(image);
 
 // ---------handle functions----------
 function handleYesButton(){
     console.log('YES');
     // removeIntro();
-    startTimer();
+    // startTimer();
     // displayGame();
     alert('Yes!');
 };
@@ -152,6 +163,20 @@ function handlePlayButton(){
 console.log('you pressed play');
 };
 
+function handleStartGameButton(){
+    startTimer();
+    alert('ready?');
+    getInputValue();
+    updateAge();
+};
+
+function getInputValue(){
+    // Selecting the input element and get its value 
+    name = document.getElementById("input").value;
+    // Displaying the value
+    // alert(inputVal);
+}
+
 
 //----------event listeners----------
 
@@ -160,7 +185,7 @@ console.log('you pressed play');
 feed.addEventListener('click', handleFeedButton);
 sleep.addEventListener('click', handleSleepButton);
 play.addEventListener('click', handlePlayButton);
-
+startGame.addEventListener('click', handleStartGameButton)
 //----------temp----------
 
 
@@ -169,7 +194,7 @@ play.addEventListener('click', handlePlayButton);
 //     console.log('This is not a test!');
 // };
 
-// Jimmy Functions
+// Jimmy Query
 
 function createElement(type,id,className,textContent,parent) {
     let newElement = document.createElement(type);
