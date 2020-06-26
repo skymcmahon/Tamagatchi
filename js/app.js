@@ -7,20 +7,16 @@ class tomagotchi{
         this.tiredness = 0;
         this.bordom = 0;
         this.age = 0;
-        // this.name = '';
     }
     //----------methods----------
-       //eat
     eat() {
         this.hunger -= 3;
         console.log('ate food');
     }
-       //sleep
     sleep() {
         this.tiredness -= 6;
         console.log('took a nap');
     }
-       //play
     play() {
         this.bordom -= 2;
         console.log('played with toys');
@@ -28,12 +24,10 @@ class tomagotchi{
 };
 
 
-
 //---------------Universal stuff---------------
 let time = 0;
 let name = ''
 const pet = new tomagotchi();
-// console.log(pet);
 
 
 
@@ -41,7 +35,6 @@ const pet = new tomagotchi();
 //------------------------------------functions--------------------------------
 function updateAge() {
     const ageStatus = findElement('.age');
-    console.log(pet.age);
     pet.age += 1;
     ageStatus.innerText = `${name} age: ${pet.age}`;
     changeImage();
@@ -64,18 +57,15 @@ function updateStats() {
     }
 };
 
-
 function startTimer(){
     const timer = setInterval(function (){
         if (time < 60){
             time++;
-            // console.log(time);
+            console.log(time);
             if (time % 3 === 0){
                 updateStats();
-            // console.log('stats updated');
             }else if(time % 10 === 0){
                 updateAge();
-                // console.log('age updated');
             }
         } 
         else{
@@ -93,7 +83,6 @@ function removeIntro(){
     }else {
         introScreen.id = 'introScreen';
     }
-
 };
 
 function displayGame(){
@@ -108,7 +97,7 @@ function getInputValue(){
     // Selecting the input element and get its value 
     name = document.getElementById("input").value;
     // Displaying the value
-    // alert(inputVal);
+        // alert(inputVal);
 };
 
 function changeImage (){  
@@ -140,14 +129,12 @@ const tiredElement = findElement('.tired');
 const boredElement = findElement('.bored');
 const image = findElement('.image');
 
-
 // console.log(image);
 
 // ----------------------------------handle functions-----------------------------
 function handleYesButton(){
     console.log('YES');
     // removeIntro();
-    // startTimer();
     // displayGame();
     alert('Yes!');
 };
@@ -159,19 +146,16 @@ function handleNoButton(){
 };
 
 function handleFeedButton(){
-console.log('you pressed feed');
 pet.eat();
 updateStats();
 };
 
 function handleSleepButton(){
-console.log('you pressed sleep');
 pet.sleep();
 updateStats();
 };
 
 function handlePlayButton(){
-console.log('you pressed play');
 pet.play();
 updateStats();
 };
@@ -182,7 +166,6 @@ function handleStartGameButton(){
     getInputValue();
     updateAge();
 };
-
 
 
 
