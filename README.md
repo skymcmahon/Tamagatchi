@@ -2,6 +2,16 @@
 Unit One Game Project
 ---
 
+## Index:
+
+- [Overview](#Overview)
+- [Link to Game](#Link-to-game)
+- [Wireframes](#wireframes)
+- [User Stories](#User-Stories)
+- [Credits](#credits)
+
+--- 
+
 ## Overview
 This project was created as part of the ciriculum for General Assembly's Software Engeneering Imersive program. The main goal of the project is to build my version of a Tamagotchi game. It is the file structure and all documents including: HTML , CSS, and JavaScript files were cerated by me. Images will be cited at the end.
 ---
@@ -44,6 +54,8 @@ WWW.linktomygame.com
 ---
 
 ## Credits
+Fox art by Teal McDonald Instagram @teal.mcdonald.art
+
 Photo by Ray Hennessy @ https://unsplash.com/@rayhennessy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
 
 Photo by Kevin Wenning https://unsplash.com/@kevinwenning?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
