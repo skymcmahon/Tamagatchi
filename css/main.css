@@ -148,12 +148,20 @@ border: 2px solid black;
   width:  250px;
   background-image: url(/assets/L1.JPG);
   background-size: cover;
-  background-position-y: center;
-  background-position-x: center;
+  background-position: center;
+  /* background-position-y: center;
+  background-position-x: center; */
   position: absolute;
   top: 25px;
   left: 70px;
 }
+
+/* .level2image {
+  background-image: url(/assets/L2.JPG);
+  background-size: cover;
+  background-position: center;
+  display: none;
+} */
 
 .age {
   position: absolute;
