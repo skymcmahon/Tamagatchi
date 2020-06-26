@@ -44,34 +44,26 @@ function updateAge() {
     console.log(pet.age);
     pet.age += 1;
     ageStatus.innerText = `${name} age: ${pet.age}`;
+    changeImage();
 };
 
 function updateStats() {
     if (Math.random() > pet.bordomResistance){
         pet.bordom += 1;
         boredElement.innerText = `Bored: ${pet.bordom}`;
-    } else {
-        // console.log('pet resisted bordom');
     }
 
     if (Math.random() > pet.tiredResistance){
         pet.tiredness += 1;
         tiredElement.innerText = `Tired: ${pet.tiredness}`;
-    } else {
-        // console.log('pet resisted Sleep');
     }
 
     if (Math.random() > pet.hungerResistance){
         pet.hunger += 1;
-        hungryElement.innerText = `Hungry: ${pet.hunger}`
-    } else {
-        // console.log('pet resisted hunger');
+        hungryElement.innerText = `Hungry: ${pet.hunger}`;
     }
 };
 
-function updateTime(){
-
-}
 
 function startTimer(){
     const timer = setInterval(function (){
@@ -81,15 +73,10 @@ function startTimer(){
             if (time % 3 === 0){
                 updateStats();
             // console.log('stats updated');
-            }else if(time % 2 === 0){
+            }else if(time % 10 === 0){
                 updateAge();
                 // console.log('age updated');
             }
-        // // }else if (time === 10){
-        // //     updateAge();
-        // }else if (time % 3 === 0){
-        //     updateStats();
-        //     console.log('stats updated');
         } 
         else{
             console.log('Time is up');
@@ -122,12 +109,20 @@ function getInputValue(){
     name = document.getElementById("input").value;
     // Displaying the value
     // alert(inputVal);
-}
+};
 
-// function updateTime(params) {
-//     const timer = document.getElementById('timer');
-//     timer.innerText = `Timer: ${time}s`;
-// }
+function changeImage (){  
+    if ( pet.age === 2){
+        image.style.backgroundImage = "url('/assets/L2.JPG')";
+    }else if ( pet.age === 3){
+        image.style.backgroundImage = "url(/assets/L3.JPG)";
+    }else if ( pet.age === 4){
+        image.style.backgroundImage = "url(/assets/L4.JPG)";
+    }else if ( pet.age === 5){
+        image.style.backgroundImage = "url(/assets/L5.JPG)";
+    }
+    //SHOUT OUT TO MELISA FOR HELPING WITH THIS MONSTER!
+};
 
 
 
