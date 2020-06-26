@@ -11,11 +11,12 @@ WWW.linktomygame.com
 ---
 
 ## Wireframes
-(./assets/Tamagatchi Web.jpeg)
-(./assets/GadgetFlow.jpeg)
+![Web](./assets/Tamagatchi Web.jpeg)
+
+![Flow](./assets/GadgetFlow.jpeg)
 
 ### Web verson is in development 
-(./assets/TamagatchiMobile.jpeg)
+![Mobile](./assets/TamagatchiMobile.jpeg)
 ---
 ## User Stories
 
