@@ -1,4 +1,4 @@
-class tomagotchi{
+class Tamagotchi{
     constructor(hungerResistance, tiredResistance, bordomResistance){
         this.hungerResistance = hungerResistance || Math.floor((Math.random() * (.2 - .15 + .1) + .15)* 10) /10;
         this.tiredResistance = tiredResistance || Math.floor((Math.random() * (.6 - .4 + .1) + .4)* 10) /10;
@@ -27,7 +27,7 @@ class tomagotchi{
 //---------------Universal stuff---------------
 let time = 0;
 let name = ''
-const pet = new tomagotchi();
+const pet = new Tamagotchi();
 
 
 
