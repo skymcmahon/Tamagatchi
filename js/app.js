@@ -41,6 +41,7 @@ function updateAge() {
 };
 
 function updateStats() {
+    changeImageEnd();
     if (Math.random() > pet.bordomResistance){
         pet.bordom += 1;
         boredElement.innerText = `Bored: ${pet.bordom}`;
@@ -64,7 +65,7 @@ function startTimer(){
             console.log(time);
             if (time % 3 === 0){
                 updateStats();
-            }else if(time % 10 === 0){
+            }else if(time % 4 === 0){
                 updateAge();
             }
         } 
@@ -113,7 +114,13 @@ function changeImage (){
     //SHOUT OUT TO MELISA FOR HELPING WITH THIS MONSTER!
 };
 
-
+function changeImageEnd (){  
+    if ( pet.age === 6 ){
+        image.style.backgroundImage = "url('/assets/Win')";
+    } else if ( pet.hunger === 11 || pet.tiredness === 11 || pet.bordom === 11){
+        image.style.backgroundImage = "url('/assets/RIP')";
+    }
+};
 
 // ----------------------------------DOM Elements-------------------------------
 const introScreen = document.getElementById('introScreen');
