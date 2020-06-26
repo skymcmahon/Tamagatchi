@@ -11,7 +11,7 @@ WWW.linktomygame.com
 ---
 
 ## Wireframes
-![Web](./assets/Tamagatchi Web.jpeg)
+![Web](./assets/TamagatchiWeb.jpeg)
 
 ![Flow](./assets/GadgetFlow.jpeg)
 
