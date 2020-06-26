@@ -17,7 +17,7 @@ This project was created as part of the ciriculum for General Assembly's Softwar
 ---
 
 ## Link to game
-WWW.linktomygame.com
+https://pages.git.generalassemb.ly/skymcmahon/Tamagatchi/
 ---
 
 ## Wireframes
