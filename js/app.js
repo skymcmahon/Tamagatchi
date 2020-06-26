@@ -38,10 +38,10 @@ function updateAge() {
     pet.age += 1;
     ageStatus.innerText = `${name} age: ${pet.age}`;
     changeImage();
+    endGame();
 };
 
 function updateStats() {
-    changeImageEnd();
     if (Math.random() > pet.bordomResistance){
         pet.bordom += 1;
         boredElement.innerText = `Bored: ${pet.bordom}`;
@@ -68,10 +68,7 @@ function startTimer(){
             }else if(time % 4 === 0){
                 updateAge();
             }
-        } 
-        else{
-            console.log('Time is up');
-            console.log(pet);
+        }else {
             clearInterval(timer);
         }
     }, 1000);
@@ -114,11 +111,15 @@ function changeImage (){
     //SHOUT OUT TO MELISA FOR HELPING WITH THIS MONSTER!
 };
 
-function changeImageEnd (){  
+function endGame (){  
     if ( pet.age === 6 ){
-        image.style.backgroundImage = "url('/assets/Win')";
+        image.style.backgroundImage = "url('/assets/Win.jpg')";
+        image.innerText = `Congratulations ${name} Survived!`;
+        time = 61
     } else if ( pet.hunger === 11 || pet.tiredness === 11 || pet.bordom === 11){
-        image.style.backgroundImage = "url('/assets/RIP')";
+        image.style.backgroundImage = "url('/assets/RIP.jpg')";
+        image.innerText = `R.I.P ${name}`;
+        time = 61
     }
 };
 

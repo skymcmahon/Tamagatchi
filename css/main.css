@@ -149,11 +149,15 @@ border: 2px solid black;
   background-image: url(/assets/L1.JPG);
   background-size: cover;
   background-position: center;
-  /* background-position-y: center;
-  background-position-x: center; */
   position: absolute;
   top: 25px;
   left: 70px;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 50px;
+  color: whitesmoke;
+  overflow-wrap: normal;
+  text-shadow: 2px 5px black;
 }
 
 .age {
