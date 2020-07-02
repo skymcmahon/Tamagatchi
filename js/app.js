@@ -1,7 +1,7 @@
 class Tamagotchi{
     constructor(hungerResistance, tiredResistance, bordomResistance){
         this.hungerResistance = hungerResistance || Math.floor((Math.random() * (.2 - .15 + .1) + .15)* 10) /10;
-        this.tiredResistance = tiredResistance || Math.floor((Math.random() * (.6 - .4 + .1) + .4)* 10) /10;
+        this.tiredResistance = tiredResistance || Math.floor((Math.random() * (.3 - .2 + .1) + .2)* 10) /10;
         this.bordomResistance = bordomResistance ||  Math.floor((Math.random() * (.2 - .15 + .1) + .15)* 10) /10;
         this.hunger = 0;
         this.tiredness = 0;
@@ -14,11 +14,11 @@ class Tamagotchi{
         console.log('ate food');
     }
     sleep() {
-        this.tiredness -= 6;
+        this.tiredness -= 2;
         console.log('took a nap');
     }
     play() {
-        this.bordom -= 2;
+        this.bordom -= 3;
         console.log('played with toys');
     }
 };
@@ -38,8 +38,6 @@ function updateAge() {
     pet.age += 1;
     ageStatus.innerText = `${name} age: ${pet.age}`;
     changeImage();
-    endGame();
-    die();
 };
 
 function updateStats() {
@@ -47,16 +45,18 @@ function updateStats() {
         pet.bordom += 1;
         boredElement.innerText = `Bored: ${pet.bordom}`;
     }
-
+    
     if (Math.random() > pet.tiredResistance){
         pet.tiredness += 1;
         tiredElement.innerText = `Tired: ${pet.tiredness}`;
     }
-
+    
     if (Math.random() > pet.hungerResistance){
         pet.hunger += 1;
         hungryElement.innerText = `Hungry: ${pet.hunger}`;
     }
+    endGame();
+    die();
 };
 
 function startTimer(){
@@ -64,7 +64,7 @@ function startTimer(){
         if (time < 60){
             time++;
             console.log(time);
-            if (time % 3 === 0){
+            if (time % 1 === 0){
                 updateStats();
             }else if(time % 7 === 0){
                 updateAge();

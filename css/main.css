@@ -158,6 +158,7 @@ border: 2px solid black;
   color: whitesmoke;
   overflow-wrap: normal;
   text-shadow: 2px 5px black;
+  transition: ease-in-out;
 }
 
 .age {
@@ -205,8 +206,4 @@ label {
   border-radius: 15px;
 }
 
-/* ----------invisible------------- */
-  #invisible {
-      display: none;
-
-  }
+/* ----------No------------- */
