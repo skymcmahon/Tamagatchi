@@ -207,3 +207,21 @@ label {
 }
 
 /* ----------No------------- */
+
+.stop {
+  height: 250px;
+  width:  250px;
+  background-image: url(../assets/meow.jpg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 25px;
+  left: 70px;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 50px;
+  color: whitesmoke;
+  overflow-wrap: normal;
+  text-shadow: 2px 5px black;
+  transition: ease-in-out;
+}

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- JS -->
-    <script defer src="./js/app.js"></script>
+    <script defer src="../js/app.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Tamagotchi</title>
 </head>
 <body>
@@ -14,30 +14,16 @@
         <h1>World's Cutest Tamagotchi Pet</h1>
     </header>
     <main>
-       
-        </section>
-   
-        <section id="game">
-            <div class="case">
-                <div class="screen">
-                    <div class="age">Pet age: 0</div>
-                    <div class="image"></div>
-                    <div class="stats">
-                        <div class="hungry">Hungry: 0</div>
-                        <div class="tired">Tired: 0</div>
-                        <div class="bored">Bored: 0</div>
-                    </div>
-                </div>
-                <div class="buttons">
-                    <button id="button1" class="button">Feed</button>
-                    <button id="button2" class="button">Sleep</button>
-                    <button id="button3" class="button">Play</button>
-                </div>
-                <input id="input" type="text" value=""></input>
-                <label for="input">Give your pet a name...</label>
-                <button id="startGameButton">Press to start game.</button>
+     
+        <section id="introScreen">
+            <Span>Do you want to play?</Span>
+            <div class="introButtons">
+                <div id="yes"><a href="../index.html">Of course</a></div>
+                <div id="no"><a href="../No.html">No I suck!</a></div>
             </div>
         </section>
+     
+       
     </main>
     <footer>
         <h2>Credits</h2>
